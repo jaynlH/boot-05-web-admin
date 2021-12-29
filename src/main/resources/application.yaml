@@ -1,0 +1,22 @@
+spring:
+  datasource:
+
+    url: jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: A20010217a
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      filters: stat,wall
+
+      stat-view-servlet:
+        enabled: true
+        login-password: admin
+        login-username: admin
+      web-stat-filter:
+        enabled: true
+      aop-patterns: com.nlhui.admin.*
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
